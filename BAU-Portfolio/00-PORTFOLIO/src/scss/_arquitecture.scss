@@ -322,6 +322,13 @@ margin: 5%;
     display: inline-block;
     margin-right: 10px;
     box-shadow: $myshadow;
+    transition: all 0.3s ease 0s;
+    
+}
+
+.port-mod:hover {
+    background-color: $myyellow;
+    border: 1px solid $myyellow;
 }
 
 .port-img-min {
@@ -331,11 +338,6 @@ margin: 5%;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     margin: 0 auto;
-}
-
-.port-mod:hover {
-    background-color: $myyellow;
-    border: 1px solid $myyellow;
 }
 
 .port-btn-seemore {

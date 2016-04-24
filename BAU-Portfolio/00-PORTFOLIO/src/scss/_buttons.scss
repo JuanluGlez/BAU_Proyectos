@@ -14,6 +14,7 @@ mark {
     background-color: rgba(50, 50, 50, 0);
     border: 1px $myblack solid;
     letter-spacing: 1px;
+    transition: all 0.3s ease 0s;
 }
 
 .button:hover {
