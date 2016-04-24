@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 @charset "UTF-8";
-=======
->>>>>>> 2aa0d0f8e061ffcdec8380eaeed269e6e9365f58
 /* Typo General */
 body {
   font-family: open sans, sans-serif;
@@ -131,13 +128,9 @@ mark {
   font-size: 16px;
   background-color: rgba(50, 50, 50, 0);
   border: 1px #1E100D solid;
-<<<<<<< HEAD
   letter-spacing: 1px;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s; }
-=======
-  letter-spacing: 1px; }
->>>>>>> 2aa0d0f8e061ffcdec8380eaeed269e6e9365f58
 
 .button:hover {
   background-color: #FFE120;
@@ -928,7 +921,6 @@ body {
   margin-bottom: 20px;
   display: inline-block;
   margin-right: 10px;
-<<<<<<< HEAD
   box-shadow: 1px 2px 5px 0px rgba(50, 50, 50, 0.3);
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s; }
@@ -936,9 +928,6 @@ body {
 .port-mod:hover {
   background-color: #FFE120;
   border: 1px solid #FFE120; }
-=======
-  box-shadow: 1px 2px 5px 0px rgba(50, 50, 50, 0.3); }
->>>>>>> 2aa0d0f8e061ffcdec8380eaeed269e6e9365f58
 
 .port-img-min {
   height: 200px;
@@ -948,26 +937,16 @@ body {
   border-top-right-radius: 4px;
   margin: 0 auto; }
 
-<<<<<<< HEAD
-=======
-.port-mod:hover {
-  background-color: #FFE120;
-  border: 1px solid #FFE120; }
-
->>>>>>> 2aa0d0f8e061ffcdec8380eaeed269e6e9365f58
 .port-btn-seemore {
   margin: 0px 0px 80px;
   padding: 10px 40px; }
 
-<<<<<<< HEAD
 .port-btn-seemore:before {
   content: "Ver más"; }
 
 .port-btn-seemore:focus:before {
   content: "Ver menos"; }
 
-=======
->>>>>>> 2aa0d0f8e061ffcdec8380eaeed269e6e9365f58
 @media only screen and (max-width: 500px) {
   .port-mod {
     margin-right: 0px; }
@@ -984,7 +963,6 @@ body {
   float: left;
   text-align: center;
   box-shadow: inset 0px 3px 2px 0px rgba(50, 50, 50, 0.3); }
-<<<<<<< HEAD
 
 ul .inner {
   overflow: hidden;
@@ -1056,5 +1034,3 @@ ul li a.toggle {
   -webkit-animation-iteration-count: 1;
   -webkit-animation-duration: 0.7s;
   -webkit-transform-style: preserve-3d; }
-=======
->>>>>>> 2aa0d0f8e061ffcdec8380eaeed269e6e9365f58
