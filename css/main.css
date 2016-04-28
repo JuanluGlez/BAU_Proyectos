@@ -947,7 +947,6 @@ body {
 
 .port-mods-container {
   margin: 0 auto;
-  width: 70%;
   padding-top: 5%; }
 
 .port-mod {
@@ -958,7 +957,6 @@ body {
   background-color: white;
   margin-bottom: 20px;
   display: inline-block;
-  margin-right: 15px;
   box-shadow: 1px 2px 5px 0px rgba(50, 50, 50, 0.3);
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s; }
@@ -985,7 +983,11 @@ body {
 .port-btn-seeless:before {
   content: "Ver menos"; }
 
-@media only screen and (min-width: 1242px) {
+@media only screen and (min-width: 825px) {
+  .port-mods-container {
+    width: 70%; } }
+
+@media only screen and (min-width: 1177px) {
   .port-mods-container {
     width: 60%; } }
 
@@ -1015,7 +1017,8 @@ body {
 .cntct-input {
   border: 0px;
   margin: 0px;
-  background-color: transparent; }
+  background-color: transparent;
+  width: 230px; }
 
 .msg3 {
   background-color: transparent;
