@@ -311,7 +311,6 @@ box-shadow:         3px 3px 2px 0px rgba(50, 50, 50, 0.22);
 
 .port-mods-container {
     margin: 0 auto;
-    width: 70%;
     padding-top: 5%;
 }
 
@@ -324,7 +323,6 @@ box-shadow:         3px 3px 2px 0px rgba(50, 50, 50, 0.22);
     background-color: white;
     margin-bottom: 20px;
     display: inline-block;
-    margin-right: 15px;
     box-shadow: $myshadow;
     transition: all 0.3s ease 0s;
     
@@ -357,8 +355,12 @@ box-shadow:         3px 3px 2px 0px rgba(50, 50, 50, 0.22);
     content: "Ver menos";
 }
 
-
-@media only screen and (min-width:1242px) {
+@media only screen and (min-width:825px) {
+    .port-mods-container {
+        width: 70%;
+    }
+}
+@media only screen and (min-width:1177px) {
 
     .port-mods-container {
         width: 60%;
@@ -402,14 +404,14 @@ box-shadow:         3px 3px 2px 0px rgba(50, 50, 50, 0.22);
     border: 0px;
     margin: 0px;
     background-color:rgba(0,0,0,0.0);
+    width: 230px;
 }
+
 
 .msg3 {
     background-color: rgba(0,0,0,0.0);
     border: 0px;
 }
-
-
 
 textarea::-webkit-input-placeholder {
     color: $myblack;
