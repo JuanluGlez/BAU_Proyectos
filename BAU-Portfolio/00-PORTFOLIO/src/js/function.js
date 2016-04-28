@@ -10,6 +10,19 @@ $('.toggle').click(function() {
     };
 });
 
+//Seemore button
+
+$(document).on("ready", main);
+
+function main(){
+    $("#seemore").on("click", cambiarTexto);
+}
+
+function cambiarTexto(){
+    $(this).toggleClass("port-btn-seeless");
+}
+
+
 //Smooth Scroll
 
 $(document).ready(function(){

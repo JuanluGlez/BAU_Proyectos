@@ -1,4 +1,77 @@
 @charset "UTF-8";
+/*Fade in*/
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* line 7, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_animations.scss */
+.fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s; }
+
+/* line 22, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_animations.scss */
+.fade-in.one {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s; }
+
+/* line 28, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_animations.scss */
+.fade-in.two {
+  -webkit-animation-delay: 1.0s;
+  -moz-animation-delay: 1.0s;
+  animation-delay: 1.0s; }
+
+/* line 34, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_animations.scss */
+.fade-in.three {
+  -webkit-animation-delay: 1.4s;
+  -moz-animation-delay: 1.4s;
+  animation-delay: 1.4s; }
+
+/*Rotación eje z*/
+@-webkit-keyframes girando {
+  from {
+    -webkit-transform: rotateY(0deg); }
+  to {
+    -webkit-transform: rotateY(-360deg); } }
+
+/* line 48, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_animations.scss */
+#contenedor {
+  margin: 30px auto;
+  -webkit-perspective: 200px; }
+
+/* line 53, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_animations.scss */
+#girando:hover {
+  -webkit-animation-name: girando;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-duration: 0.7s;
+  -webkit-transform-style: preserve-3d; }
+
 /* Typo General */
 /* line 3, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_typo.scss */
 body {
@@ -142,14 +215,6 @@ hr {
     font-size: 15px; } }
 
 /* line 1, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_buttons.scss */
-mark {
-  color: #1E100D;
-  background-color: #FFE120;
-  border-radius: 5px;
-  padding-left: 5px;
-  padding-right: 5px; }
-
-/* line 9, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_buttons.scss */
 .button {
   font-family: open sans, sans-serif;
   border-radius: 5px;
@@ -157,44 +222,31 @@ mark {
   font-size: 16px;
   background-color: rgba(50, 50, 50, 0);
   border: 1px #1E100D solid;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  transition: all 0.3s ease 0s; }
+  /* line 11, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_buttons.scss */
+  .button-form {
+    border: 2px solid #1E100D;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: rgba(50, 50, 50, 0);
+    letter-spacing: 1px;
+    transition: all 0.3s ease 0s;
+    margin-left: 19px; }
+  /* line 23, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_buttons.scss */
+  .button-form:hover {
+    background-color: #1E100D;
+    border-color: #1E100D;
+    border-style: solid;
+    color: #FFE120; }
 
-/* line 19, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_buttons.scss */
+/* line 31, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_buttons.scss */
 .button:hover {
   background-color: #FFE120;
   border-color: #1E100D;
   border-style: solid; }
-
-/* line 27, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_buttons.scss */
-.input {
-  border-radius: 5px;
-  padding: 14px;
-  font-family: open sans, sans-serif;
-  font-size: 14px;
-  background-color: white;
-  border-color: #1E100D;
-  border-width: 0.10em;
-  border-style: solid;
-  letter-spacing: 2px;
-  display: inline-block; }
-
-/* line 40, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_buttons.scss */
-.input:hover {
-  background-color: #FFE120;
-  border-color: #FFE120; }
-
-/* line 48, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_buttons.scss */
-.disabled {
-  border-color: gainsboro;
-  color: gainsboro;
-  font-family: open sans, sans-serif;
-  border-radius: 5px;
-  border-style: solid;
-  padding: 15px 20px;
-  font-size: 16px;
-  background-color: white;
-  border-width: 1px;
-  letter-spacing: 1px; }
 
 /* Nav mobile */
 /* line 3, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
@@ -208,32 +260,33 @@ mark {
   background-color: #FFFFFF;
   padding-top: 10px;
   /* Webkit (Chrome 11+) */
-  background-image: -webkit-linear-gradient(left, #ffe120 98%, #d1b91a 100%); }
+  background-image: -webkit-linear-gradient(left, #ffe120 98%, #d1b91a 100%);
+  z-index: 20; }
 
-/* line 17, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
+/* line 18, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
 .hmbrgr-nav .hmbrgr-ul .hmbrgr-li {
   width: 60%;
   list-style-type: none;
   margin: 0 auto;
   margin-top: 55px; }
 
-/* line 24, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
+/* line 25, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
 .hmbrgr-ul-spacer {
   margin-top: 65px; }
 
-/* line 28, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
+/* line 29, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
 .hmbrgr-nav li {
   margin-top: 30px; }
 
 /* Icons */
-/* line 34, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
+/* line 35, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
 .logo_nav {
   width: 90%;
   max-width: 175px;
   margin-top: 10px;
   margin-right: 15px; }
 
-/* line 41, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
+/* line 42, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
 .nav-icon {
   margin: 0 auto;
   width: 65px;
@@ -252,33 +305,30 @@ mark {
 .cntct-icon {
     background-image:url(img/svg/icon-contact-inactive.svg);
 }}*/
-/* line 61, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
+/* line 62, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
 .li-nav {
   margin-top: 40px; }
 
-/* line 66, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
+/* line 67, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
 .page-container {
   width: 100%;
   float: left;
   transition: all 0.5s ease;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  z-index: 10; }
 
 /* Nav settings */
-/* line 76, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
+/* line 78, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
 #main-check {
   display: none; }
 
-/* line 80, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
+/* line 82, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
 #main-check:checked ~ nav {
   width: 57%;
   padding: 10px; }
 
-/* line 85, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
-#main-check:checked ~ label {
-  /* Hacer aqui la X */ }
-
 /* Nav icon */
-/* line 92, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
+/* line 90, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
 .hmbrgr-label {
   position: fixed;
   padding-left: 51px;
@@ -294,7 +344,7 @@ mark {
   -moz-box-shadow: 2px 2px 2px 0px #dbdbdb;
   box-shadow: 2px 2px 2px 0px #dbdbdb; }
 
-/* line 109, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
+/* line 107, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
 .hmbrgr-label:before {
   content: "";
   position: absolute;
@@ -308,10 +358,10 @@ mark {
 
 /* Desktop queries */
 @media all and (min-width: 735px) {
-  /* line 128, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
+  /* line 130, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
   .hmbrgr-label {
     display: none; }
-  /* line 132, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
+  /* line 134, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
   .hmbrgr-nav {
     width: 80%;
     max-width: 600px;
@@ -340,28 +390,28 @@ mark {
     background-image: -webkit-linear-gradient(left, white 98%, white 100%);
     /* W3C Markup */
     background-image: linear-gradient(to right, white 98%, white 100%); }
-  /* line 157, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
+  /* line 159, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
   .hmbrgr-nav .hmbrgr-ul .hmbrgr-li {
     width: 90px;
     display: inline-block;
     margin: 15px;
     margin-top: 21px; }
-  /* line 163, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
+  /* line 165, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
   .hmbrgr-ul {
     float: right;
     margin: 20px 6% 0px 0px; }
-  /* line 168, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
+  /* line 170, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
   .logo_nav {
     float: left;
     width: 90px;
     margin-left: 20px;
     margin-top: 11px; }
-  /* line 172, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
+  /* line 174, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
   .nav-icon {
     width: 0;
     height: 0;
     margin: 0 auto; }
-  /* line 178, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
+  /* line 180, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_nav.scss */
   .hmbrgr-nav li {
     margin: 0px 30px;
     float: left; } }
@@ -778,36 +828,37 @@ body {
 /* line 9, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .index-img {
   width: 139px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  z-index: 10; }
 
-/* line 14, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 15, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .index-header {
   text-align: center; }
 
 @media only screen and (min-width: 37px) {
-  /* line 20, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 21, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .index-header {
     margin-top: 140px;
     line-height: 6px; } }
 
 @media only screen and (min-width: 337px) {
-  /* line 28, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 29, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .index-header {
     margin-top: 177px;
     line-height: 6px; } }
 
 @media only screen and (min-width: 725px) {
-  /* line 36, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 37, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .index-header {
     margin-top: 133px;
     line-height: 0; }
-  /* line 40, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 41, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .index-img {
     width: 158px;
     margin-top: 21px; } }
 
 /*Section CV*/
-/* line 50, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 51, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .sect-CV {
   margin-top: 250px;
   background-color: white;
@@ -817,38 +868,38 @@ body {
   -moz-box-shadow: 0px 0px 11px 0px rgba(50, 50, 50, 0.32);
   box-shadow: 0px 0px 11px 0px rgba(50, 50, 50, 0.32); }
 
-/* line 60, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 62, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .header-CV {
   text-align: center; }
 
-/* line 64, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 66, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .icons-cv-container {
   text-align: center;
   margin-top: 52px; }
 
-/* line 69, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 71, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .icon-CV-wrapper {
   display: inline-block;
   margin: 15px; }
 
-/* line 74, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 76, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .icon-CV {
   width: 110px; }
 
-/* line 78, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 80, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .text-CV-container {
   margin: 0 auto;
   max-width: 570px; }
 
-/* line 83, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 85, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .text-CV-presentation, .text-CV-description {
   margin: 20px 25px; }
 
-/* line 85, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 87, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .icons-social-container {
   text-align: center; }
 
-/* line 89, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 91, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .icon-social {
   width: 35px;
   height: 35px;
@@ -857,141 +908,141 @@ body {
   background-repeat: no-repeat;
   background-size: contain; }
 
-/* line 98, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 100, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .fb {
   background-image: url(../img/icon-fb-inactive.svg); }
 
-/* line 99, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 101, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .tw {
   background-image: url(../img/icon-tw-inactive.svg); }
 
-/* line 100, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 102, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .in {
   background-image: url(../img/icon-in-inactive.svg); }
 
-/* line 101, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 103, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .be {
   background-image: url(../img/icon-be-inactive.svg); }
 
 @media only screen and (min-width: 375px) {
-  /* line 105, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 107, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .icons-cv-container {
     width: 300px;
     margin: 0 auto; }
-  /* line 109, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 111, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .cv-hr {
     margin-bottom: 50px; }
-  /* line 112, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 114, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .text-CV-presentation, .text-CV-description {
     margin: 20px 50px; } }
 
 @media only screen and (min-width: 650px) {
-  /* line 119, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 121, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .sect-CV {
     padding-top: 150px;
     padding-bottom: 150px; }
-  /* line 124, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 126, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .text-CV-container {
     height: 140px; }
-  /* line 127, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 129, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .text-CV-presentation, .text-CV-description {
     max-width: 260px;
     margin: 10px;
     float: left; }
-  /* line 132, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 134, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .text-CV-presentation {
     text-align: right; }
-  /* line 135, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 137, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .icons-social-container {
     float: left;
     margin-top: -60px;
     margin-left: 75px; }
-  /* line 141, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 143, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .icon-social {
     transition-property: background, border-radius;
     transition-duration: 0.2s, 1s;
     transition-timing-function: linear, ease-in;
     transition-delay: 0s, 1s; }
-  /* line 147, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 149, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .fb:hover {
     background-image: url(../img/icon-fb-active.svg); }
-  /* line 148, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 150, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .tw:hover {
     background-image: url(../img/icon-tw-active.svg); }
-  /* line 149, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 151, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .in:hover {
     background-image: url(../img/icon-in-active.svg); }
-  /* line 150, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 152, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .be:hover {
     background-image: url(../img/icon-be-active.svg); } }
 
 @media only screen and (min-width: 760px) {
-  /* line 155, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 157, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .icons-cv-container {
     width: 100%; } }
 
 /*Section Education and Experience*/
-/* line 163, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 165, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .sec-edu-exp {
   margin: 60px 25px; }
 
-/* line 168, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 170, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .subsection-hr {
   width: 80px;
   margin-left: 0px;
   margin-top: -13px; }
 
-/* line 174, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 176, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .subsection-title {
   margin-left: 10px; }
 
-/* line 178, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 180, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .subsection-ul {
   margin-top: 55px; }
 
-/* line 180, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 182, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .subsection-li {
   line-height: 5px;
   margin-top: 50px; }
 
 @media only screen and (min-width: 375px) {
-  /* line 183, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 185, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .sec-edu-exp {
     margin-left: 50px; } }
 
 @media only screen and (min-width: 500px) {
-  /* line 190, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 192, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .edu-exp-container {
     width: 50%;
     float: left;
     border-top-right-radius: 10px; }
-  /* line 196, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 198, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .sec-edu-exp {
     float: right;
     margin-right: 20px;
     margin-top: 30px;
     margin-bottom: 0px;
     width: 300px; }
-  /* line 204, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 206, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .sec-lang-container {
     padding-left: 5%; }
-  /* line 208, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 210, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .sec-lang {
     float: right;
     width: 50%;
     margin-top: -30px; }
-  /* line 214, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 216, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .langs-container {
     padding-top: 50px;
     width: 200px; } }
 
 @media only screen and (min-width: 1500px) {
-  /* line 221, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 223, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .sec-edu-exp {
     margin-right: 50px; } }
 
 /*Section Languaje*/
-/* line 229, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 231, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .sec-lang {
   background-color: white;
   padding-bottom: 80%;
@@ -1000,42 +1051,42 @@ body {
   -moz-box-shadow: 3px 3px 2px 0px rgba(50, 50, 50, 0.22);
   box-shadow: 3px 3px 2px 0px rgba(50, 50, 50, 0.22); }
 
-/* line 239, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 241, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .sec-lang-container {
   margin: 25px;
   padding-top: 60px; }
 
-/* line 244, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 246, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .langs-container {
   text-align: center;
   margin-top: 50px;
   line-height: 80px; }
 
 @media only screen and (min-width: 375px) {
-  /* line 251, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 253, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .sec-lang-container {
     margin: 0px 40px; }
-  /* line 255, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 257, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .langs-container {
     margin-left: 0px; } }
 
 @media only screen and (min-width: 527px) {
-  /* line 260, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 262, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .sec-lang {
     padding-bottom: 400px;
     border-bottom-left-radius: 10px; }
-  /* line 264, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 266, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .lang-circle {
     width: 220px;
     margin-top: 10px; }
-  /* line 268, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  /* line 270, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .langs-container {
     text-align: center;
     margin-top: -10px;
     line-height: 80px; } }
 
 /*Section Software*/
-/* line 278, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 280, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .sec-soft {
   background-color: #FFE120;
   padding: 100px 0px 125px 0px;
@@ -1046,7 +1097,7 @@ body {
   text-align: center;
   color: #1E100D; }
 
-/* line 289, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 291, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .subsection-hr-soft {
   width: 90px;
   margin-top: -13px;
@@ -1054,7 +1105,7 @@ body {
   border: 1px #1E100D solid; }
 
 /*Section Portfolio*/
-/* line 299, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 301, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .sec-portfolio {
   background-color: white;
   float: left;
@@ -1065,70 +1116,197 @@ body {
   -moz-box-shadow: 0px 0px 11px 0px rgba(50, 50, 50, 0.32);
   box-shadow: 0px 0px 11px 0px rgba(50, 50, 50, 0.32); }
 
-/* line 310, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 312, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .port-mods-container {
-  margin: 5%; }
+  margin: 0 auto;
+  width: 70%;
+  padding-top: 5%; }
 
-/* line 314, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 318, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .port-mod {
   border: 1px solid #F2F2F2;
   border-radius: 5px;
-  width: 300px;
-  padding-bottom: 35px;
+  width: 270px;
+  padding-bottom: 25px;
   background-color: white;
   margin-bottom: 20px;
   display: inline-block;
-  margin-right: 10px;
-  box-shadow: 1px 2px 5px 0px rgba(50, 50, 50, 0.3); }
+  margin-right: 15px;
+  box-shadow: 1px 2px 5px 0px rgba(50, 50, 50, 0.3);
+  transition: all 0.3s ease 0s; }
 
-/* line 327, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 333, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+.port-mod:hover {
+  background-color: #FFE120;
+  border: 1px solid #FFE120; }
+
+/* line 338, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .port-img-min {
-  height: 200px;
-  width: 300px;
+  height: 170px;
+  width: 270px;
   background-color: #FFE120;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   margin: 0 auto; }
 
-/* line 336, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
-.port-mod:hover {
-  background-color: #FFE120;
-  border: 1px solid #FFE120; }
-
-/* line 341, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 347, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .port-btn-seemore {
   margin: 0px 0px 80px;
   padding: 10px 40px; }
 
-/* line 346, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 352, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .port-btn-seemore:before {
   content: "Ver más"; }
 
-/* line 350, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
-.port-btn-seemore:focus:before {
+/* line 356, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+.port-btn-seeless:before {
   content: "Ver menos"; }
 
-@media only screen and (max-width: 500px) {
-  /* line 357, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
-  .port-mod {
-    margin-right: 0px; }
-  /* line 358, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+@media only screen and (min-width: 1242px) {
+  /* line 363, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
   .port-mods-container {
-    margin: 0px; } }
+    width: 60%; } }
 
+@media only screen and (min-width: 1265px) {
+  /* line 370, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  .port-mods-container {
+    width: 100%;
+    margin: 0 auto; } }
+
+/*Contact*/
+/* line 380, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+.sec-contact {
+  float: left;
+  padding-top: 50px;
+  width: 70%;
+  margin: 19px; }
+
+/* line 388, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+.cntct-form {
+  margin-top: 35px;
+  width: 250px; }
+
+/* line 393, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+.cntct-fieldset {
+  border: 0px;
+  font-size: 20px;
+  line-height: 25px;
+  display: inline-block;
+  width: 100%; }
+
+/* line 401, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+.cntct-input {
+  border: 0px;
+  margin: 0px;
+  background-color: transparent; }
+
+/* line 407, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+.msg3 {
+  background-color: transparent;
+  border: 0px; }
+
+/* line 414, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+textarea::-webkit-input-placeholder {
+  color: #1E100D;
+  right: 20px; }
+
+/* line 418, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+textarea:-moz-placeholder {
+  color: #1E100D; }
+
+/* line 421, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+textarea:-ms-input-placeholder {
+  color: #1E100D; }
+
+/* line 424, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+input::-webkit-input-placeholder {
+  color: #1E100D; }
+
+/* line 427, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+input:-moz-placeholder {
+  color: #1E100D; }
+
+/* line 430, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+input:-ms-input-placeholder {
+  color: #1E100D; }
+
+/* line 433, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+input, textarea[placeholder] {
+  color: #1E100D;
+  font-weight: 700; }
+
+/* line 437, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+input:hover, textarea:hover[placeholder] {
+  background-color: #F2D620; }
+
+/* line 440, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+input:focus, textarea:focus[placeholder] {
+  background-color: #F2D620; }
+
+@media only screen and (min-width: 676px) {
+  /* line 446, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  .cntct-form {
+    width: 100%; }
+  /* line 450, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  .msg {
+    position: relative; }
+  /* line 454, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  .msg2 {
+    position: absolute;
+    top: 10px; }
+  /* line 460, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  .msg3 {
+    background-color: #FFE120;
+    position: absolute;
+    left: 172px;
+    top: 8px; }
+  /* line 467, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  .button-form {
+    margin-top: 40px; } }
+
+/*
+@media only screen and (min-width:637px) {
+    
+    label {display: block;}
+    
+}
+@media only screen and (min-width:600px) {
+    
+    .sec-contact {
+        margin-left: 10%;
+    }
+    
+}
+@media only screen and (min-width:600px) {
+    
+    .sec-contact {
+        margin-left: 15%;
+    }
+    
+}
+*/
 /*Section Footer*/
-/* line 364, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+/* line 495, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
 .main-footer {
   background-color: #FFE120;
   color: #1E100D;
   bottom: 0px;
-  padding: 115px 0px;
+  padding: 30px 0px;
   width: 100%;
   float: left;
-  text-align: center;
-  -webkit-box-shadow: inset 0px 3px 2px 0px rgba(50, 50, 50, 0.3);
-  -moz-box-shadow: inset 0px 3px 2px 0px rgba(50, 50, 50, 0.3);
-  box-shadow: inset 0px 3px 2px 0px rgba(50, 50, 50, 0.3); }
+  text-align: center; }
+
+@media only screen and (min-width: 700px) {
+  /* line 506, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  .main-footer {
+    margin-bottom: 120px; } }
+
+@media only screen and (min-width: 700px) {
+  /* line 512, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_arquitecture.scss */
+  .contact-n-footer-wrapper {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto; } }
 
 /* line 1, C:/Users/juanluis/Google Drive/Mis royos/John Knob/02 Front Projects/01 Mi Portfolio/src/scss/_accordion.scss */
 ul .inner {
