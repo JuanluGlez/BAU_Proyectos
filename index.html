@@ -5,7 +5,7 @@
     <title>Inicio | JK's Portfolio</title>
     
     <!--Styles-->
-    <link rel=stylesheet href="scss/main.css" type="text/css">
+    <link rel=stylesheet href="css/main.css" type="text/css">
     
     <!--Movile viewport-->
     <meta name="viewport" content="width=device-width, initial-scale1">
@@ -29,8 +29,8 @@
         <a href="#index-header"><img class="logo_nav" src="img/Logo_nav-02.svg"></a>
         <ul class="hmbrgr-ul hmbrgr-ul-spacer">
             <li><a class="nav-link" href="#CV-anchor">CV</a></li>
-            <li><a class="nav-link" href="">Portfolio</a></li>
-            <li><a class="nav-link" href="">Contacto</a></li>
+            <li><a class="nav-link" href="#port-anchor">Portfolio</a></li>
+            <li><a class="nav-link" href="#cntct-anchor">Contacto</a></li>
         </ul>
     </nav>
     
@@ -40,7 +40,7 @@
         <header class="index-header">
             <img class="index-img fade-in one" src="img/cabecera-perilla.svg">
             <h1 class="fade-in two">John Knob's Portfolio</h1>
-            <h4 class="fade-in one three">El portfolio de Juanlu Glez</h4>
+            <h4 class="fade-in three">El portfolio de Juanlu Glez</h4>
         </header>
         
         <section class="sect-CV" id="CV-anchor">
@@ -92,7 +92,7 @@
     
         </section>
         
-        <div class="edu-exp-container">
+        <div class="edu-exp-container" >
             <section class="sec-edu-exp">
             <h3 class="subsection-title">Educación</h3>
             <hr class="subsection-hr">
@@ -123,7 +123,7 @@
         </section>
         </div>
         
-        <section class="sec-lang">
+        <section class="sec-lang" id="lang-anchor">
             <article class="sec-lang-container">
                 <h3 class="subsection-title">Idiomas</h3>
                 <hr class="subsection-hr">
@@ -135,7 +135,7 @@
             </article>
         </section>
         
-        <section class="sec-soft">
+        <section class="sec-soft" id="soft-anchor">
             
                 <h3>Softwares</h3>
                 <hr class="subsection-hr-soft">
@@ -152,7 +152,7 @@
             
             </section>
         
-        <section class="sec-portfolio">
+        <section class="sec-portfolio" id="port-anchor">
         
             <h3>Algunos trabajos</h3>
                 <hr class="subsection-hr-soft">
@@ -182,13 +182,20 @@
                 <button class="button">Ver proyecto</button>
             </article></a>
                 
+                <a href="#"><article class="port-mod" id="girando">
+                <img class="port-img-min" src="img/test-goku.jpg" >
+                <h3>Título 3</h3>
+                <p>Etiquetas - para - trabajo</p>
+                <button class="button">Ver proyecto</button>
+            </article></a>
+                
             </div>
             
             <!--Accordion starts here-->
             <ul class="accordion">
                 <li>
                   
-                <ul class="accordion-mods-wrapper inner" id="container">   
+                <ul class="port-mods-container inner" id="container">   
                     <a href="#"><article class="port-mod"id="girando" >
                         <img class="port-img-min" src="img/test-goku.jpg" >
                         <h3>Título 2</h3>
@@ -209,18 +216,55 @@
                         <p>Etiquetas - para - trabajo</p>
                         <button class="button">Ver proyecto</button>
                     </article></a>
+                    
+                    <a href="#"><article class="port-mod" id="girando">
+                        <img class="port-img-min" src="img/test-goku.jpg" >
+                        <h3>Título 2</h3>
+                        <p>Etiquetas - para - trabajo</p>
+                        <button class="button">Ver proyecto</button>
+                    </article></a>
                 </ul> 
             
-            <button class="button port-btn-seemore toggle" href="#"></button>
+            <button class="button port-btn-seemore toggle"id="seemore" href="#" ></button>
             
             </li>
             </ul>
             
         </section>
         
+        <div class="contact-n-footer-wrapper">
+        <section class="sec-contact" id="cntct-anchor">
+        
+            <h3 class="subsection-title">Contacto</h3>
+            <hr class="subsection-hr">
+            <article class="cntct-form">
+            <form action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi" method="post">
+
+                <fieldset class="cntct-fieldset">
+                    <label for="name">Hola, mi nombre es</label>
+                    <input type="text" id="name" name="user_name" class="cntct-input" required placeholder="Introduce tu nombre">
+                </fieldset>
+                
+                <fieldset class="cntct-fieldset">
+                    <label for="name">Mi e-mail es</label>
+                    <input type="email" id="mail" name="user_email" class="cntct-input" required placeholder="Introduce tu email">
+                </fieldset>
+                
+                <fieldset class="cntct-fieldset msg">
+                    <label class="msg2" for="msg">Y te escribo para</label>
+                    <textarea class="msg3" id="msg" name="user_message" class="cntct-input" placeholder="Introduce tu mensaje"></textarea>
+                </fieldset>
+                      
+      <button class="button-form" type="submit">Enviar</button>
+                
+            </form>
+            </article>
+        </section>
+        
         <footer class="main-footer">
             <p>Ⓒ Este sitio web y el propio sitio son propiedad intelectual de Juan Luis González Marrero</p>
         </footer>
+        </div>
         
         
     </div>
