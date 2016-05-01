@@ -23,6 +23,48 @@ function cambiarTexto(){
 }
 
 
+//Portfolio animation on click
+
+$(document).on("ready", first);
+
+function first(){
+    $("#port-mod, #port-mod2").on("click", second);
+}
+
+function second(){
+    $(this).toggleClass("girando");
+}
+
+   
+//Validación de formulario
+
+var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    $(document).ready(function(){
+        
+       $("#bEnviar").click(function(){
+          
+           var nombre = $("#itNombre").val();
+           var correo = $("#itMail").val();
+           
+           if(nombre == ""){
+                $("#mensaje1").fadeIn();
+                return false;
+            }else{
+                $("#mensaje1").fadeOut();
+                if(correo == "" || !expr.test(correo)){
+                    $("#mensaje2").fadeIn();
+                    return false;
+                    }
+                
+                }
+                
+            });
+       });
+                           
+    
+
+
 //Smooth Scroll
 
 $(document).ready(function(){
@@ -37,3 +79,6 @@ $(document).ready(function(){
 	    });
 	});
 });
+
+
+

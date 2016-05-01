@@ -28,7 +28,7 @@
     <nav class="hmbrgr-nav">
         <a href="#index-header"><img class="logo_nav" src="img/Logo_nav-02.svg"></a>
         <ul class="hmbrgr-ul hmbrgr-ul-spacer">
-            <li><a class="nav-link" href="#CV-anchor">CV</a></li>
+            <li><a class="nav-link" href="#CV-anchor" id="closeNav">CV</a></li>
             <li><a class="nav-link" href="#port-anchor">Portfolio</a></li>
             <li><a class="nav-link" href="#cntct-anchor">Contacto</a></li>
         </ul>
@@ -38,13 +38,16 @@
         
         
         <header class="index-header">
-            <img class="index-img fade-in one" src="img/cabecera-perilla.svg">
-            <h1 class="fade-in two">John Knob's Portfolio</h1>
-            <h4 class="fade-in three">El portfolio de Juanlu Glez</h4>
+            <article class="h-content-wapper">
+                <img class="index-img fade-in one" src="img/cabecera-perilla.svg">
+                <h1 class="fade-in two">John Knob's Portfolio</h1>
+                <h4 class="fade-in three">El portfolio de Juanlu Glez</h4>
+            </article>
         </header>
         
         <section class="sect-CV" id="CV-anchor">
             
+            <div class="CV-content-wrapper">
             <header class="header-CV">
                 <h1>Curriculum vitae</h1>
                 <hr class="cv-hr">
@@ -89,7 +92,7 @@
                 </div>
                 
             </article>
-    
+            </div>
         </section>
         
         <div class="edu-exp-container" >
@@ -161,28 +164,28 @@
             <!--First 3 mods-->
             <div class="port-mods-container" id="container">
                 
-                 <a href="#"><article class="port-mod" id="girando">
+                 <a href="#"><article class="port-mod" id="port-mod">
                 <img class="port-img-min" src="img/test-goku.jpg" >
                 <h3>Título 1</h3>
                 <p>Etiquetas - para - trabajo</p>
                 <button class="button">Ver proyecto</button>
             </article></a>
             
-                 <a href="#"><article class="port-mod" id="girando">
+                 <a href="#"><article class="port-mod" id="port-mod2">
                 <img class="port-img-min" src="img/test-goku.jpg" >
                 <h3>Título 2</h3>
                 <p>Etiquetas - para - trabajo</p>
                 <button class="button">Ver proyecto</button>
             </article></a>
             
-                 <a href="#"><article class="port-mod" id="girando">
+                 <a href="#"><article class="port-mod" id="port-mod">
                 <img class="port-img-min" src="img/test-goku.jpg" >
                 <h3>Título 3</h3>
                 <p>Etiquetas - para - trabajo</p>
                 <button class="button">Ver proyecto</button>
             </article></a>
                 
-                <a href="#"><article class="port-mod" id="girando">
+                <a href="#"><article class="port-mod" id="port-mod">
                 <img class="port-img-min" src="img/test-goku.jpg" >
                 <h3>Título 3</h3>
                 <p>Etiquetas - para - trabajo</p>
@@ -195,29 +198,30 @@
             <ul class="accordion">
                 <li>
                   
-                <ul class="port-mods-container inner" id="container">   
-                    <a href="#"><article class="port-mod"id="girando" >
+                <ul class="port-mods-container inner" id="container">
+                    
+                    <a href="#"><article class="port-mod" id="port-mod">
                         <img class="port-img-min" src="img/test-goku.jpg" >
                         <h3>Título 2</h3>
                         <p>Etiquetas - para - trabajo</p>
                         <button class="button">Ver proyecto</button>
                     </article></a>
                     
-                    <a href="#"><article class="port-mod" id="girando">
+                    <a href="#"><article class="port-mod" id="port-mod" >
                             <img class="port-img-min" src="img/test-goku.jpg" >
                             <h3>Título 2</h3>
                             <p>Etiquetas - para - trabajo</p>
                             <button class="button">Ver proyecto</button>
                     </article></a>
                     
-                    <a href="#"><article class="port-mod" id="girando">
+                    <a href="#"><article class="port-mod" id="port-mod">
                         <img class="port-img-min" src="img/test-goku.jpg" >
                         <h3>Título 2</h3>
                         <p>Etiquetas - para - trabajo</p>
                         <button class="button">Ver proyecto</button>
                     </article></a>
                     
-                    <a href="#"><article class="port-mod" id="girando">
+                    <a href="#"><article class="port-mod" id="port-mod">
                         <img class="port-img-min" src="img/test-goku.jpg" >
                         <h3>Título 2</h3>
                         <p>Etiquetas - para - trabajo</p>
@@ -233,21 +237,25 @@
         </section>
         
         <div class="contact-n-footer-wrapper">
+            
         <section class="sec-contact" id="cntct-anchor">
         
             <h3 class="subsection-title">Contacto</h3>
             <hr class="subsection-hr">
             <article class="cntct-form">
-            <form action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi" method="post">
+            <form action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi" method="post" id="" name="" onsubmit="return validacion()">
 
+                
                 <fieldset class="cntct-fieldset">
                     <label for="name">Hola, mi nombre es</label>
-                    <input type="text" id="name" name="user_name" class="cntct-input" required placeholder="Introduce tu nombre">
+                    <input type="text" id="itNombre" name="name" class="cntct-input"  placeholder="Introduce tu nombre" required>
+                    <div class="error" id="mensaje1">X</div>
                 </fieldset>
                 
                 <fieldset class="cntct-fieldset">
-                    <label for="name">Mi e-mail es</label>
-                    <input type="email" id="mail" name="user_email" class="cntct-input" required placeholder="Introduce tu email">
+                    <label for="name">Mi dirección email es</label>
+                    <input type="email" id="itMail" name="user_email" class="cntct-input" placeholder="Introduce tu email" required>
+                    <div class="error" id="mensaje2">X</div>
                 </fieldset>
                 
                 <fieldset class="cntct-fieldset msg">
@@ -255,7 +263,7 @@
                     <textarea class="msg3" id="msg" name="user_message" class="cntct-input" placeholder="Introduce tu mensaje"></textarea>
                 </fieldset>
                       
-      <button class="button-form" type="submit">Enviar</button>
+      <button class="button-form" type="submit" id="bEnviar">Enviar</button>
                 
             </form>
             </article>
@@ -268,6 +276,10 @@
         
         
     </div>
+    
+    
+    <!--JQ validacion formulario-->
+    <script src="js/jquery-1.7.1.min.js"></script>
     
     <!--JQ smoothscroll-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
