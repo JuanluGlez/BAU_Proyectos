@@ -37,3 +37,11 @@ $(document).ready(function(){
 	    });
 	});
 });
+
+//Portfolio animation on click
+
+$('a.button').on('click' ,function() {
+    
+    $('input[name=firstName]').addClass('animated shake');
+    
+}); 

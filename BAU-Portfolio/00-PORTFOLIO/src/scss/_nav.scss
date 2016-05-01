@@ -27,7 +27,9 @@
 }
 
 .hmbrgr-nav li {
-    margin-top: 30px;
+    padding-top: 30px;
+    margin: 0 auto;
+    width: 100px;
 }
 
 /* Icons */ 
@@ -79,6 +81,10 @@
     display: none;
 }
 
+.main-check {
+    display: none;
+}
+
 #main-check:checked ~ nav {
     width: 57%;
     padding: 10px;
@@ -88,38 +94,24 @@
 /* Nav icon */ 
 
 .hmbrgr-label {
+    content: url("../img/hmnrgr-label-01.svg");
     position: fixed;
-    padding-left: 51px;
-    font-size: 2.5em;
     cursor: pointer;
-    height: 45px;
+    padding: 8px 7px 7px 7px;
     top: 42px;
     right: 30px;
     background-color: white;
     border: 1px solid #FAFAFA;
     border-radius: 5px;
-    -webkit-box-shadow: 2px 2px 2px 0px rgba(219,219,219,1);
-    -moz-box-shadow: 2px 2px 2px 0px rgba(219,219,219,1);
-    box-shadow: 2px 2px 2px 0px rgba(219,219,219,1);
+    box-shadow: $myshadow;
+    z-index: 30;
     
-}
-
-.hmbrgr-label:before {
-    content: "";
-    position: absolute;
-    left: 8px;
-    top: 10px;
-    width: 35px;
-    height: 0.15em;
-    background: black;
-    border-radius: 3px;
-    box-shadow: 
-        0 0.25em 0 0 black,
-        0 0.5em 0 0 black;
 }
 
 #main-check:checked ~ label {
-    
+    content: url("../img/hmnrgr-label-02.svg");
+    padding: 8px 7px 7px 7px;
+
 }
 
 
@@ -134,9 +126,9 @@
     .hmbrgr-nav {
         width: 80%; max-width: 600px; height: 64px; border: 1px solid black; border-radius: 40px; overflow:visible; bottom: 49px;left: 0;right: 0;margin: 0 auto; padding-top: 4px; border: 1px #F2F2F2 solid; 
         
-        -webkit-box-shadow: 0px 2px 2px     0px rgba(204,204,204,1);
-    -moz-box-shadow: 0px 2px 2px        0px rgba(204,204,204,1);
-    box-shadow: 0px 2px 2px 0px         rgba(204,204,204,1);
+        box-shadow: $myshadow;
+        
+        //Color blanco
         
         /* IE10+ */ 
 background-image: -ms-linear-gradient(left, rgba(255,255,255,1) 98%, rgba(255,255,255,1) 100%);
@@ -180,6 +172,9 @@ background-image: linear-gradient(to right, rgba(255,255,255,1) 98%, rgba(255,25
     .hmbrgr-nav li {
         margin: 0px 30px;
         float: left;
-        
+        padding-top: 0px;
+        width: 70px;
 }
+    
+    
 }

@@ -50,10 +50,10 @@ animation-delay: 1.4s;
    -webkit-perspective: 200px;
 }
 
-#girando:hover {
+.girando {
    -webkit-animation-name: girando;
    -webkit-animation-timing-function: linear;
    -webkit-animation-iteration-count: 1;
-   -webkit-animation-duration: 0.7s;
+   -webkit-animation-duration: 0.5s;
    -webkit-transform-style: preserve-3d;
 }
